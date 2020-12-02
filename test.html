@@ -1,0 +1,40 @@
+
+<?php
+$login_name = filter_input(INPUT_POST, 'login_name');
+$login_pass= filter_input(INPUT_POST, 'login_pass');
+if (!empty($login_name)){
+if (!empty($login_pass)){
+$host = "localhost";
+//id15171402_tpms_2020
+$dbusername = "root";
+$dbpassword = "B~n$*Xo0f&\kt4iG";
+$dbname = "id15171402_tpms2020";
+// Create connection
+$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+if (mysqli_connect_error()){
+die('Connect Error ('. mysqli_connect_errno() .') '
+. mysqli_connect_error());
+}
+else{
+$sql = "INSERT INTO account (username, password)
+values ('$login_name','$login_pass')";
+if ($conn->query($sql)){
+echo "New record is inserted sucessfully";
+}
+else{
+echo "Error: ". $sql ."
+". $conn->error;
+}
+$conn->close();
+}
+}
+else{
+echo "Password should not be empty";
+die();
+}
+}
+else{
+echo "Username should not be empty";
+die();
+}
+?>

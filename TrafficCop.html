@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+*{
+margin:0;
+padding:0;
+}
+
+body{
+background-color: black;
+}
+
+.background-wrap{
+position:fixed;
+z-index:-1000;
+width:100%;
+height:100%;
+overflow:hidden;
+top:0;
+left:0;
+
+}
+
+#video-bg-elem{
+position:absolute;
+top:0;
+left:0;
+min-height:100%;
+min-width:100%;
+}
+
+.header-content{
+position:absolute;
+width:100%;
+min-height:100%;
+z-index:1000;
+background-color:rgba(0,0,0,0.7);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,p{
+	  font-family: Verdana;
+      font-size: 14px;
+      color:white;
+	  font-weight: bold;
+	  font-style: italic;
+	  text-align: center;
+	 
+}
+
+
+.button-container{
+display:inline-block;
+position:relative;
+}
+#over img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.button-container a{
+position: absolute;
+bottom:4em;
+right:4em;
+background-color:black;
+border-radius:1.5em;
+color:white;
+text-transform:lowercase;
+padding:1em 1.5em;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="topnav">
+  <a class="active" href="https://codd.cs.gsu.edu/~osolaru1/SoftwareEngineering/TrafficCop.html">Home</a>
+  <a href="https://codd.cs.gsu.edu/~osolaru1/SoftwareEngineering/login.html">Login</a>
+  <a href="https://codd.cs.gsu.edu/~osolaru1/SoftwareEngineering/signup.html">Sign Up</a>
+  <a href="https://codd.cs.gsu.edu/~osolaru1/SoftwareEngineering/Map.html">Traffic Map</a>
+  </div>
+  
+  
+<div class="background-wrap">
+<video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted"> 
+<source src="Introducing Hyundai NEXO.mp4" type="video/mp4">
+Video not supported
+</video> 
+</div>
+
+<div class="header-content">
+<h1>Our goal is keeping our drivers and passessengers safe and secure on the road </h1>
+<p>Click the button below to Log in</p>
+<p>New to our website? Click Sign Up to make an account</p>
+
+<div class ="button-container" style="position:absolute; width:100%; height:100%">
+<img src="Logo.png" alt="CopImage" width="500" height="500">
+
+</div>
+
+
+</div>
+
+
+
+
+</body>
+</html>
